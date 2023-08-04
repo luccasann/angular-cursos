@@ -1,1 +1,25 @@
 <p>cursos-list works!</p>
+<button class="btn btn-primary" (click)="getCursos()">Get Cursos</button>
+<button class="btn btn-success" (click)="showCursos()">Show Cursos</button>
+<br>
+
+<table class="table table-striped  ">
+    <thead>
+        <tr>
+            <th>Cursos</th>
+            <th>Thumb</th>
+            <th>Versão</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let curso of cursos">
+            <td>{{ curso.nome }}</td>
+            <td>{{ curso.thumb }}</td>
+            <td>{{ curso.versao }}</td>
+        </tr>
+
+
+    </tbody>
+
+</table>
